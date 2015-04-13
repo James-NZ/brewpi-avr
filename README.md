@@ -1,3 +1,8 @@
+
+> This repository is no longer maintained. 
+>
+> The latest firmware for BrewPi (for Spark Core and Arduino) can be found in https://github.com/BrewPi/firmware
+
 brewpi-avr
 ==========
 
