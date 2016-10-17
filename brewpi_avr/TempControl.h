@@ -40,7 +40,7 @@ const uint16_t MIN_HEAT_ON_TIME = 180;
 // Use a large minimum off time in fridge constant mode. No need for very fast cycling.
 const uint16_t MIN_COOL_OFF_TIME_FRIDGE_CONSTANT = 600;
 // Set a minimum off time between switching between heating and cooling
-const uint16_t MIN_SWITCH_TIME = 600;
+const uint16_t MIN_SWITCH_TIME = 1800;
 // Time allowed for peak detection
 const uint16_t COOL_PEAK_DETECT_TIME = 1800;
 const uint16_t HEAT_PEAK_DETECT_TIME = 900;
