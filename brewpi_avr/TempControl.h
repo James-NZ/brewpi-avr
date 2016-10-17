@@ -34,9 +34,9 @@ const uint16_t MIN_COOL_OFF_TIME = 300;
 // Use a minimum off time for the heater as well, so it heats in cycles, not lots of short bursts
 const uint16_t MIN_HEAT_OFF_TIME = 300;
 // Minimum on time for the cooler.
-const uint16_t MIN_COOL_ON_TIME = 180;
+const uint16_t MIN_COOL_ON_TIME = 120;
 // Minimum on time for the heater.
-const uint16_t MIN_HEAT_ON_TIME = 180;
+const uint16_t MIN_HEAT_ON_TIME = 60;
 // Use a large minimum off time in fridge constant mode. No need for very fast cycling.
 const uint16_t MIN_COOL_OFF_TIME_FRIDGE_CONSTANT = 600;
 // Set a minimum off time between switching between heating and cooling
