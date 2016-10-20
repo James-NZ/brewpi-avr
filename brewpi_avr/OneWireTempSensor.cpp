@@ -42,7 +42,7 @@ bool OneWireTempSensor::init(){
 	// save address and pinNr for log messages
 	char addressString[17];
 	printBytes(sensorAddress, 8, addressString);
-	uint8_t pinNr = oneWire->pinNr();
+	DEBUG_ONLY(uint8_t pinNr = oneWire->pinNr());
 
 	bool success = false;
 
