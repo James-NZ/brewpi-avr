@@ -62,6 +62,8 @@ class TempSensor {
 	
 	void init();
 	
+	void resetFilters();
+	
 	bool isConnected() { return _sensor->isConnected(); }
 	
 	void update();

@@ -531,11 +531,25 @@ void TempControl::setMode(char newMode, bool force){
 		force = true;
 	}
 	if (force) {
-		cs.mode = newMode;
 		if(newMode == MODE_OFF){
 			cs.beerSetting = INVALID_TEMP;
 			cs.fridgeSetting = INVALID_TEMP;
 		}
+		// Switching out of OFF mode
+		else if(cs.mode == MODE_OFF)
+		{
+			// Reset filters as beer may have just been added to chamber
+			beerSensor->resetFilters();
+			fridgeSensor->resetFilters();
+			
+			// Reset integrator to ensure fridge temperature setpoint is sensible 
+			cv.diffIntegral = 0;
+			
+			// Allow actuators to start up again
+			lastHeatTime = 0;
+			lastCoolTime = 0;
+		}
+		cs.mode = newMode;
 		eepromManager.storeTempSettings();
 	}
 }
